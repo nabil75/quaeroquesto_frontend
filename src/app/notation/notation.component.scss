@@ -1,0 +1,83 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+::placeholder {
+  color: var(--lightgray-text);
+}
+
+.ancre {
+  @include ancre-style();
+}
+
+.header-question {
+  @include header-question-style();
+}
+
+.question {
+  @include question-style();
+}
+
+.input-border-bottom {
+  @include input-border-bottom-style();
+}
+
+li.question::marker {
+  @include list-marker-style();
+}
+
+.libelle-question {
+  @include libelle-question-style();
+}
+
+.type-question {
+  @include type-question-style();
+}
+
+.menu-icon {
+  @include menu-icon-style();
+}
+
+.auto-mode-icon {
+  @include auto-mode-icon-style();
+}
+
+.menu-question {
+  @include menu-question-style();
+}
+
+.cdk-drag-preview {
+  @include cdk-drag-preview-style();
+}
+.saisie-number {
+  @include saisie-number-style();
+}
+
+.div-etoiles {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+img {
+  cursor: pointer;
+  margin-right: 0.5vw;
+}
+
+.img-etoile{
+  width: 2.5vw;
+  height: 2.2vw;
+}
+.img-etoile:hover {
+  content: url("src/assets/images/quaero/star_full.png");
+}
+
+.label-parameter {
+  @include label-parameters-style();
+}
+
+.div-parameters{
+  @include div-parameters-style();
+}
+
+mat-button-toggle-group {
+  @include mat-button-toogle-group-style();
+}

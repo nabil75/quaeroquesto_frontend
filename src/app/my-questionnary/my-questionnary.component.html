@@ -1,0 +1,67 @@
+
+<body>
+  <div class="d-flex justify-content-center">
+    <label class="label-xxxl"> {{'my_questionnaire.title_page' | translate}}</label>
+  </div>
+  <div class="content">
+      <table mat-table [dataSource]="dataSource" matSort class="table-dark">
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="entete"> {{'my_questionnaire.id' | translate}}
+          </th>
+          <mat-cell *matCellDef="let row"> {{row.position}} </mat-cell>
+        </ng-container>
+
+        <!-- Intitule Column -->
+        <ng-container matColumnDef="intitule">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="entete"> {{'my_questionnaire.title' | translate}}
+          </th>
+          <mat-cell *matCellDef="let row"> {{row.intitule}} </mat-cell>
+        </ng-container>
+
+        <!-- Nombre questions Column -->
+        <ng-container matColumnDef="nombre_questions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="entete"> {{'my_questionnaire.nombre_questions' |
+            translate}}</th>
+          <mat-cell *matCellDef="let row"> {{row.nombre_questions}} </mat-cell>
+        </ng-container>
+
+        <!-- Date Column -->
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="entete"> {{'my_questionnaire.creation_date' |
+            translate}}</th>
+          <mat-cell *matCellDef="let row"> {{row.date | date:'dd/MM/yyyy HH:mm:ss'}} </mat-cell>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="entete"> {{'my_questionnaire.actions' |
+            translate}} </th>
+          <mat-cell *matCellDef="let row">
+
+            <img *ngIf="showImage" [routerLink]="['/new-questionnary', row.position]" class="img-action"
+              id="img_modifier" [src]="path_img_modify" title="Modifier le questionnaire" />
+
+            <img *ngIf="showImage" [routerLink]="['/edit-questionnary', row.position]" class="img-action"
+              id="img_afficher" [src]="path_img_entry" title="Saisir un questionnaire" />
+
+            <img *ngIf="showImage" id="img_supprimer" class="img-action" [src]="path_img_delete"
+              data-url="" (click) ="deleteRow(row.position, row.intitule)" title="Supprimer le questionnaire"  />
+
+            <img id="img_visualiser" [routerLink]="['/resultat-simple', row.position]" class="img-action"
+            [src]="path_img_analyse" title="Analyser les résultats" />
+
+            <img id="img_rapport" [routerLink]="['/dashboard', row.position]" class="img-action"
+            [src]="path_img_rapport" title="Créer un rapport" />
+            
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+      </table>
+      <mat-paginator  pageSize="12"  aria-label="Select page of periodic elements" showFirstLastButtons></mat-paginator>
+  </div>
+</body>

@@ -1,0 +1,91 @@
+/* General Modal Styling */
+.side-modal {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: #f9f9f9;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 1050;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.side-modal.open {
+  right: 0;
+}
+
+/* Modal Content */
+.modal-content {
+  padding: 30px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+/* Close Button */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  color: #555;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-modal:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+  color: #ff4d4d;
+}
+
+/* Title Styling */
+.libelle-question {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  word-break: break-word;
+  width: 95%;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .side-modal {
+    width: 100%;
+  }
+
+  .libelle-question {
+    font-size: 1.4em;
+  }
+
+  .form-check {
+    margin-bottom: 10px;
+  }
+}
+.img-etoile{
+  width: 2.5vw;
+  height: 2.2vw;
+  padding: 5px;
+}
+.img-etoile:hover{
+    content: url("src/assets/images/quaero/star_full.png");
+}
+img{
+    cursor: pointer;
+    margin-right: 0.5vw;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+

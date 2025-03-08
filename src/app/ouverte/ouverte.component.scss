@@ -1,0 +1,64 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+::placeholder {
+  color: var(--lightgray-text);
+}
+
+.ancre {
+  @include ancre-style();
+}
+
+.header-question {
+  @include header-question-style();
+}
+
+.question {
+  @include question-style();
+}
+
+.input-border-bottom {
+  @include input-border-bottom-style();
+}
+
+li.question::marker {
+  @include list-marker-style();
+}
+
+.libelle-question {
+  @include libelle-question-style();
+}
+
+.type-question {
+  @include type-question-style();
+}
+
+.menu-icon {
+  @include menu-icon-style();
+}
+
+.auto-mode-icon {
+  @include auto-mode-icon-style();
+}
+
+.menu-question {
+  @include menu-question-style();
+}
+
+.cdk-drag-preview {
+  @include cdk-drag-preview-style();
+}
+
+.div-parameters {
+  @include div-parameters-style();
+}
+
+mat-button-toggle-group {
+  @include mat-button-toogle-group-style();
+}
+
+.reponse-question{
+  background-color: transparent;
+  color: var(--primary-text);
+}
+

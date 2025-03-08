@@ -1,0 +1,37 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+.li-question {
+  @include question-style();
+}
+
+.libelle-question {
+  @include libelle-question-style();
+  border: none;
+  background-color: transparent;
+}
+
+.centered {
+  text-align: center;
+}
+
+li::marker{
+  @include list-marker-style();
+}
+
+.ligne {
+  font-size: medium;
+}
+
+.colonne {
+  font-size: medium;
+}
+
+table{
+  margin-top: 2%;
+}
+
+td {
+  display: table-cell;
+  vertical-align: middle;
+}

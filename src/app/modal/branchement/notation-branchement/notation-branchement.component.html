@@ -1,0 +1,25 @@
+<div class="side-modal" [class.open]="showModal">
+  <div class="modal-content">
+    <button type="button" class="btn-close close-modal" aria-label="Close" (click)="closeModal()"></button>
+    <h1 class="libelle-question"><strong>{{titre}}</strong></h1>
+    <div class="d-flex justify-content-between">
+      <p class="form-label">Si la réponse est:</p>
+      <mat-form-field>
+        <mat-label>Modalité</mat-label>
+        <select matNativeControl required>
+          <option></option>
+          <option *ngFor="let modalite of modalites">{{ modalite.libelle}}</option>
+        </select>
+      </mat-form-field>
+      <p class="form-label">Passer à la question:</p>
+      <mat-form-field>
+        <mat-label>Question</mat-label>
+        <select matNativeControl required>
+          <option></option>
+          <option *ngFor="let question of questions ; index as indexOfelement;" [ngValue]="question.id"> {{
+            question.libelle }}</option>
+        </select>
+      </mat-form-field>
+    </div>
+  </div>
+</div>

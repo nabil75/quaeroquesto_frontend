@@ -1,0 +1,151 @@
+<body>
+    <div class="fixed-size-element">
+        <div class="d-flex justify-content-center">
+            <label class="label-xxxl">{{'result_simple.explore_data' | translate}}</label>
+        </div>
+        <mat-card>
+            <mat-card-title>
+                <label class="label-xxl">{{'result_simple.questionnaire' | translate}} : {{status}}</label>
+            </mat-card-title>
+            <mat-card-content>
+                <div>
+                    <mat-form-field>
+                        <mat-label>{{'result_simple.choix_question' | translate}}</mat-label>
+                        <mat-select panelClass="custom-select-panel" [(ngModel)]="questionSelected">
+                            <mat-option *ngFor="let question of questions, index as i" value="{{i}}"
+                                (click)="getValQuestion(i.toString())">{{i+1}} - {{question}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <div class="d-flex justify-content-start" >
+                        <button mat-menu-item (click)="showBarChart()"
+                            [disabled]="disableBarChart" class="btn-chart"><mat-icon class="icon-chart" title="Histogramme">bar_chart</mat-icon>
+                            <span class="btn-text">Histogramme</span></button>
+                        <button mat-menu-item (click)="showPieChart()" [disabled]="disablePieChart" class="btn-chart">
+                            <mat-icon class="icon-chart" title="Camembert">pie_chart</mat-icon>
+                            <span class="btn-text">Camembert</span></button>
+                        <button mat-menu-item (click)="showLineChart()" [disabled]="disableLineChart" class="btn-chart">
+                            <mat-icon class="icon-chart" title="Graphe Ligne">show_chart</mat-icon>
+                            <span class="btn-text">Graphe Ligne</span></button>
+                        <button mat-menu-item (click)="showScatterChart()" [disabled]="disableScatterChart" class="btn-chart">
+                            <mat-icon class="icon-chart" title="Nuage de points">scatter_plot</mat-icon>
+                            <span class="btn-text">Nuage de points</span></button>
+                        <button mat-menu-item (click)="showWordCloudChart()" [disabled]="disableWordCloudChart" class="btn-chart">
+                            <mat-icon class="icon-chart" title="Nuage de mots">cloud_queue</mat-icon>
+                            <span class="btn-text">Nuage de mots</span></button>
+                            <button mat-menu-item (click)="showGrilleChart()" [disabled]="disableGrilleChart" class="btn-chart">
+                                <mat-icon class="icon-chart" title="Tableau">apps</mat-icon>
+                                <span class="btn-text">Tableau</span></button>
+                            <button mat-menu-item (click)="showOsgoodChart()" [disabled]="disableOsgoodChart" class="btn-chart">
+                                <mat-icon class="icon-chart" title="Echelle d'Osgood">linear_scale</mat-icon>
+                                <span class="btn-text">Echelle</span></button>
+                            <button mat-menu-item (click)="showNotationChart()" [disabled]="disableNotationChart" class="btn-chart">
+                                <mat-icon class="icon-chart" title="Notation">star_rate</mat-icon>
+                                <span class="btn-text">Notation</span></button>
+                            <button mat-menu-item (click)="showSatisfactionChart()" [disabled]="disableSatisfactionChart" class="btn-chart">
+                                <mat-icon class="icon-chart" title="Satisfaction">sentiment_very_satisfied</mat-icon>
+                                <span class="btn-text">Satisfaction</span></button>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center message">
+                    <label *ngIf="isMessage"><em> {{message}}</em></label>
+                </div>
+                <div *ngIf="!isMessage">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <div class="tableau" *ngIf="isTableau">
+                            <table class="table table-responsive-sm table-bordered"
+                                [ngClass]="{'table-dark': activeTheme !== 'light'}">
+                                <tbody>
+                                    <tr class="ligne-total">
+                                        <td class="colonne-position-left">#</td>
+                                        <td class="colonne-position-center colonne-resultat">Effectif</td>
+                                        <td class="colonne-position-center colonne-resultat">%</td>
+                                    </tr>
+                                    <tr *ngFor="let data of dataSourceTableau">
+                                        <td class="colonne-position-left">{{data.label}}</td>
+                                        <td class="colonne-position-right">{{data.value}}</td>
+                                        <td class="colonne-position-center">{{data.percentage | percent :'2.2'}}</td>
+                                    </tr>
+                                    <tr class="ligne-total">
+                                        <td class="colonne-position-left">Total</td>
+                                        <td class="colonne-position-right">{{sumDataSourceTableau}}</td>
+                                        <td class="colonne-position-center"> {{1 | percent :'3.2'}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tableau" *ngIf="isTableauGrille">
+                            <table class="table table-bordered table-responsive"
+                                [ngClass]="{'table-dark': activeTheme !== 'light'}">
+                                <thead>
+                                    <tr>
+                                        <th class="centered">#</th>
+                                        <th class="centered" *ngFor="let colonne of dataColonneGrille"> {{colonne}}
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let ligne of dataLigneGrille; index as i">
+                                        <td class="ligne"> {{ ligne}} </td>
+                                        <td class="col-2 colonne" *ngFor="let colonne of dataColonneGrille; index as j"
+                                            width="50px">
+                                            <div class="form-check d-flex justify-content-center">
+                                                {{dataSourceGrille[i][j]}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div draggable="true" class="graph resizable scrollable">
+                            <div class="d-flex justify-content-left" *ngIf="switchPercentage">
+                                <div class="form-check type-values">
+                                    <input class="form-check-input" name="radio-button-input" type="radio"
+                                        id="effectifs" value="1" (click)="onClickTypeTableau($event)"
+                                        [checked]="type_tableau">
+                                    <label class="form-check-label" for="effectifs">{{'commons.effectifs' |
+                                        translate}}</label>
+                                </div>
+                                <div class="form-check type-values">
+                                    <input class="form-check-input" type="radio" name="radio-button-input"
+                                        id="pourcentages" value="2" (click)="onClickTypeTableau($event)"
+                                        [checked]="!type_tableau">
+                                    <label class="form-check-label" for="pourcentages">{{'commons.pourcentages' |
+                                        translate}}</label>
+                                </div>
+                            </div>
+                            <div>
+                                <img *ngIf="source_img" [src]="source_img" alt="PlotBar Image" class="img-responsive">
+                            </div>                            
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <textarea autosize class="form-control input-border-bottom" rows="1" [(ngModel)]="commentaire"
+                     placeholder="{{'result_simple.commentaire_placeholder' | translate}}"></textarea>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button class="btn-addCommentaire" (click)="saveCommentaire()"> {{'commons.enregistrer' | translate}}</button>
+                </div>
+            </mat-card-content>
+
+
+            <!-- <button (click)="showReport()">Afficher report</button> -->
+
+            <!-- <div *ngFor="let image of images; let i = index">
+                <h3 class="titre-graphique">Titre du graphique N° {{ i + 1 }}</h3>
+                <img [src]="'data:image/png;base64,' + image" alt="Generated Image {{ i + 1 }}">
+              </div> -->
+
+        </mat-card>
+            <!-- Overlay Spinner -->
+        <div *ngIf="isLoading" class="overlay-spinner">
+            <div class="spinner-container">
+                <mat-spinner></mat-spinner>
+                <h1>Génération de la représentation cours...</h1>
+            </div>
+        </div>
+    </div>
+</body>

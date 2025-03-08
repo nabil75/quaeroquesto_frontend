@@ -1,0 +1,48 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+.question {
+  @include question-style();
+}
+
+.libelle-question {
+  @include libelle-question-style();
+}
+
+li.question::marker {
+  @include list-marker-style();
+}
+
+.input-border-bottom {
+  @include input-border-bottom-style();
+}
+
+li.question::marker {
+  @include list-marker-style();
+}
+
+.img-etoile{
+  width: 2.5vw;
+  height: 2.2vw;
+}
+
+.img-empty{
+  width: 2vw;
+  height: 2vw;
+  margin-top: 3%;
+}
+
+.img-etoile:hover{
+    content: url("src/assets/images/quaero/star_full.png");
+}
+
+img{
+    cursor: pointer;
+    margin-right: 0.5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.stars{
+  margin-top: 3%;
+}

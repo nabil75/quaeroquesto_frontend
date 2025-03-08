@@ -1,0 +1,113 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+::placeholder {
+  color: var(--lightgray-text);
+}
+
+.ancre {
+  @include ancre-style();
+}
+
+.header-question {
+  @include header-question-style();
+}
+
+.question {
+  @include question-style();
+}
+
+.input-border-bottom {
+  @include input-border-bottom-style();
+}
+
+li.question::marker {
+  @include list-marker-style();
+}
+
+.libelle-question {
+  @include libelle-question-style();
+}
+
+.type-question {
+  @include type-question-style();
+}
+
+.menu-icon {
+  @include menu-icon-style();
+}
+
+.auto-mode-icon {
+  @include auto-mode-icon-style();
+}
+
+.menu-question {
+  @include menu-question-style();
+}
+
+.cdk-drag-preview {
+  @include cdk-drag-preview-style();
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-note {
+  font-size: 1.5vw;
+  width: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--primary-text);
+}
+
+.figure-caption {
+  font-size: var(--font-body-text);
+  color: var(--primary-text);
+  text-align: center;
+  margin-top: 15px;
+}
+
+.echelle_7 {
+  width: 90%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.echelle_5 {
+  width: 60%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.btn-type-echelle {
+  margin-left: 30px;
+}
+
+.div-parameters {
+  @include div-parameters-style();
+}
+
+.div-images {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.figure {
+  text-align: center;
+  margin: 0 10px;
+  /* Ajustez l'espacement entre les figures */
+}
+
+.img-smiley {
+  width: 50px;
+  /* Ajustez la taille de l'image si nécessaire */
+  cursor: pointer;
+}
+
+mat-button-toggle-group {
+  @include mat-button-toogle-group-style();
+}

@@ -1,0 +1,72 @@
+<body>
+  <div class="d-flex justify-content-center">
+    <label class="label-xxxl">{{statusQuestionnary}}</label>
+  </div>
+  <div class="fixed-size-element">
+    <mat-card>
+      <mat-card-title>
+        <div class="d-flex justify-content-end">
+          <label class="label-xxl d-block">{{ id_questionnary }}</label>
+        </div>
+      </mat-card-title>
+      <mat-card-content>
+        <div [ngClass]="'toolbox'">
+          <ul>
+            <li [ngClass]="'li-toolbox'">
+              <button mat-button [matMenuTriggerFor]="menu" class="btn-question"><img [ngClass]="'img-toolbox'"
+                  [src]="path_img_question" title="Choisir un type de question" /></button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="questions_courantes">
+                  <mat-icon>chat_bubble_outlined</mat-icon> Questions courantes</button>
+                <button mat-menu-item [matMenuTriggerFor]="questions_avancees"> <mat-icon>app_registration</mat-icon>
+                  Questions avancées</button>
+              </mat-menu>
+
+              <mat-menu #questions_courantes="matMenu">
+                <button mat-menu-item (click)="createFermeeSimple()"><mat-icon>check</mat-icon> Choix unique</button>
+                <button mat-menu-item (click)="createFermeeMultiple()"> <mat-icon>checklist</mat-icon> Choix
+                  multiple</button>
+                <button mat-menu-item (click)="createOuverte()"> <mat-icon>comment</mat-icon> Ouverte</button>
+              </mat-menu>
+
+              <mat-menu #questions_avancees="matMenu">
+                <button mat-menu-item (click)="createGrille()"> <mat-icon>apps</mat-icon> Tableau</button>
+                <button mat-menu-item (click)="createEchelle()"> <mat-icon>linear_scale</mat-icon> Echelle</button>
+                <button mat-menu-item (click)="createNotation()"> <mat-icon>star_rate</mat-icon> Notation</button>
+                <button mat-menu-item (click)="createSatisfaction()"> <mat-icon>sentiment_very_satisfied</mat-icon>
+                  Satisfaction</button>
+                <button mat-menu-item> <mat-icon>event_note</mat-icon> Date</button>
+                <button mat-menu-item> <mat-icon>access_time</mat-icon> Heure</button>
+              </mat-menu>
+            </li>
+            <li [ngClass]="'li-toolbox'"><img [ngClass]="'img-toolbox'" id="img_save" [src]="path_img_save" data-url=""
+                title="Sauvegarder" (click)="saveQuestionnary()" /></li>
+            <li *ngIf="isNouveauQuestionnaire" [ngClass]="'li-toolbox'"><img [ngClass]="'img-toolbox'" id="img_AI_Response" [src]="path_img_ai"
+                data-url="" title="Réponse automatique" (click)="generateQuestionnary()" /></li>
+            <li [ngClass]="'li-toolbox'"><img [ngClass]="'img-toolbox'" id="img_effacer_tout" [src]="path_img_effacer"
+                data-url="" title="Tout effacer" (click)="removeAllComponents()" /></li>
+            <li [ngClass]="'li-toolbox'"><img [ngClass]="'img-toolbox'" id="img_reduce_expand"
+                [src]="img_collapse_expand_all" title="Réduire toutes les questions" (click)="collapseQuestions()" /></li>
+
+          </ul>
+        </div>
+        <div class="bg-light p-5 rounded card">
+          <div>
+            <textarea autosize id="intituleQuestionnaire" class="form-control input-border-bottom intitule"
+              placeholder="Intitule du questionnaire" rows="1" [(ngModel)]="intituleQuestionnaire"></textarea>
+            <span id="intituleQuestionnaireVide" class="d-none">Attention l'intitulé de votre questionnaire est vide,
+              veuillez le renseigner puis sauvegarder</span>
+          </div>
+          <div>
+            <ol #main cdkDropList (cdkDropListDropped)="onDrop($event)">
+              <ng-template #question></ng-template>
+            </ol>
+          </div>
+        </div>
+        <input id="content" class="d-none" />
+      </mat-card-content>
+    </mat-card>
+  </div>
+   <app-questionnary-generator #generatorModal (newQuestionEvent)="receiveQuestion($event)"></app-questionnary-generator>
+
+</body>

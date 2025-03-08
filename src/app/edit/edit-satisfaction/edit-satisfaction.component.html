@@ -1,0 +1,38 @@
+<li class="li-question">
+  <textarea autosize class="form-control libelle-question" placeholder="Libellé de la question" rows="1"
+    [(ngModel)]="libelleQuestion" name="libelleQuestion" readonly>
+    </textarea>
+  <div class="d-flex justify-content-between centered echelle_5" *ngIf="echelle == '1'">
+    <img class="img-empty" src="assets/images/quaero/star_all_empty.png" (click)='all_empty_image()' />
+    <div class="div-images" *ngFor="let niveau of echelle_list; let i = index">
+      <figure class="figure">
+        <div class="d-flex justify-content-center">
+          <img class="img-smiley" [src]="'assets/images/quaero/smiley_' + (i+1) + '.png'" [attr.data-value]="i + 1"
+            (click)="change_note($event)" />
+        </div>
+        <div class="d-flex justify-content-center">
+          <figcaption class="figure-caption">{{ niveau }}</figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between centered echelle_7" *ngIf="echelle == '2'">
+    <img class="img-empty" src="assets/images/quaero/star_all_empty.png" (click)='all_empty_image()' />
+    <div class="div-images" *ngFor="let niveau of echelle_list; let i = index">
+      <figure class="figure">
+        <div class="d-flex justify-content-center">
+          <img class="img-smiley" [src]="'assets/images/quaero/smiley_' + (i) + '.png'" [attr.data-value]="i+1"
+            (click)="change_note($event)" />
+        </div>
+        <div class="d-flex justify-content-center">
+          <figcaption class="figure-caption">{{ niveau }}</figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+      
+      <input class="input-border-bottom input-note" [(ngModel)]="value" readonly />
+  </div>
+</li>

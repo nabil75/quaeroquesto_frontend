@@ -1,0 +1,106 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+::placeholder {
+  color: var(--lightgray-text);
+}
+
+.ancre {
+  @include ancre-style();
+}
+
+.header-question {
+  @include header-question-style();
+}
+
+.question {
+  @include question-style();
+}
+
+.input-border-bottom {
+  @include input-border-bottom-style();
+}
+
+li.question::marker {
+  @include list-marker-style();
+}
+
+.libelle-question {
+  @include libelle-question-style();
+}
+
+.type-question {
+  @include type-question-style();
+}
+
+.menu-icon {
+  @include menu-icon-style();
+}
+
+.menu-question {
+  @include menu-question-style();
+}
+
+.auto-mode-icon {
+  @include auto-mode-icon-style();
+}
+
+.cdk-drag-preview {
+  @include cdk-drag-preview-style();
+}
+
+.colonne-actions {
+@include colonne-actions-style();
+width: 5%!important;
+}
+
+.colonne-position {
+  @include colonne-position-style();
+  width: 2%!important;
+}
+
+.title-modalites {
+  @include title-modalites-style();
+}
+
+.libelle-modalite {
+  @include libelle-modalite-style();
+  width: 95%!important;
+}
+
+.btn-addModalite{
+  @include btn-addModalite-style();
+}
+
+.table-modalites {
+  @include table-modalites_style();
+}
+
+.colonne-seuil{
+  @include libelle-modalite-style();
+  width: 15%!important;
+}
+
+.saisie-number {
+  @include saisie-number-style();
+}
+
+.div-parameters {
+  @include div-parameters-style();
+}
+
+td {
+  @include td-style();
+}
+  
+mat-button-toggle-group {
+  @include mat-button-toogle-group-style();
+}
+  
+  
+  
+  
+  
+  
+  
+  

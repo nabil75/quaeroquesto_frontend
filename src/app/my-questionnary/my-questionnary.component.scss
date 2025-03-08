@@ -1,0 +1,87 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+body {
+  background-color: var(--body-background);
+}
+
+.content {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1%;
+  background-color: var(--div-background);
+  height: 100%!important;
+}
+
+/* Your existing styles */
+.img-action {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-right: 20px;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.label-xxxl {
+  font-size: var(--font-size-title-page);
+  background-color: transparent;
+  padding: 0.3vw;
+  color: var(--title-section-color);
+}
+mat-cell {
+  font-size: 20px;
+  justify-content: center !important;
+}
+
+.entete {
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 1vw;
+}
+.mat-column-position {
+  flex: 0 0 5% !important;
+  justify-content: right!important;
+}
+
+.mat-column-intitule {
+  flex: 0 0 35% !important;
+  justify-content: left !important;
+}
+
+.mat-column-nombre_questions {
+  flex: 0 0 20% !important;
+}
+
+.mat-column-date {
+  flex: 0 0 20% !important;
+}
+
+.mat-column-actions {
+  flex: 0 0 20% !important;
+}
+
+
+.mat-mdc-row{
+  background-color: var(--div-background)!important;
+  color: var(--primary-text)!important;
+  border-top: solid 1px var(--secondary-text);
+  height: 6vh !important;
+}
+
+.mat-mdc-header-row {
+  background-color: var(--div-background)!important;
+  color: var(--primary-text)!important;
+}
+
+.mat-sort-header-arrow {
+  color: var(--title-section-color)!important;
+}
+
+.mat-mdc-paginator {
+  background-color:var(--paginator-background)!important;
+  color: black!important;
+}
+
+th{
+  border: none!important;
+}

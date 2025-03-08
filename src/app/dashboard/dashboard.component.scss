@@ -1,0 +1,21 @@
+.dashboard-container {
+    display: flex;
+    height: calc(100vh - 100px);
+    margin-top: 100px;
+  }
+  .widget-selector {
+    width: 20%;
+    padding: 16px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    
+  }
+  .widgets-area {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 16px;
+    background-color: #fff;
+   
+  }

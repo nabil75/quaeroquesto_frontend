@@ -1,0 +1,121 @@
+﻿{
+    "menu-general": {
+        "collect": "Collecter",
+        "clean": "Préparer",
+        "explore": "Explorer",
+        "visualize": "Visualiser",
+        "usefull-links": "Liens Utiles",
+        "language": "Langues",
+        "theme": "Thèmes",
+        "en": "Anglais",
+        "fr": "Français",
+        "dark": "Sombre",
+        "light": "Clair"
+    },
+    "home": {
+        "leitmotiv": "Boîte à outils Quaeroquesto : Un accélérateur au service de la connaissance",
+        "learn_more": "En savoir plus"
+    },
+    "my_questionnaire": {
+        "title_page": "Mes Questionnaires",
+        "choose_questionnaire": "Choisissez un questionnaire",
+        "id": "ID",
+        "title": "Intitulé",
+        "creation_date": "Date Création",
+        "actions": "Actions",
+        "nombre_questions": "Nb. questions"
+    },
+    "new_questionnaire": {
+        "title_page": "Nouveau Questionnaire"
+    },
+    "commons": {
+        "reponse": "Réponse",
+        "reponse_obligatoire": "Obligatoire",
+        "reponse_facultative": "Facultative",
+        "reponse_oui": "Oui",
+        "reponse_non": "Non",
+        "effectifs": "Effectifs",
+        "pourcentages": "Pourcentages",
+        "enregistrer": "Enregistrer",
+        "confirmation": "Confirmation avant suppression",
+        "confirmation_suppression_questionnaire": "Êtes-vous sûr de vouloir supprimer le questionnaire sélectionné ?",
+        "annuler": "Annuler",
+        "supprimer": "Supprimer"
+    },
+    "question_fermee": {
+        "modalites": "Modalités",
+        "choix_unique": "Question Fermée à Choix Unique",
+        "choix_multiple": "Question Fermée à Choix Multiple",
+        "ajouter_modalite": "Ajouter Modalité",
+        "nb_reponses_possibles": "Nombre Réponses Possibles",
+        "reponses_ordonnees": "Réponses Ordonnées"
+    },
+    "question_notation": {
+        "notation": "Question Notation-Etoiles",
+        "nb_graduations": "Nombre Graduations"
+    },
+    "question_echelle": {
+        "echelle": "Question Echelle",
+        "semantique_differentiel": "Sémantiques Différentiels",
+        "ajouter_semantique_differentiel": "Ajouter Sémantique Différentiel"
+    },
+    "question_grille": {
+        "grille": "Question Grille",
+        "lignes": "Lignes",
+        "colonnes": "Colonnes",
+        "ajouter_ligne": "Ajouter Ligne",
+        "ajouter_colonne": "Ajouter Colonne"
+    },
+    "question_satisfaction": {
+        "satisfaction": "Question Satisfaction",
+        "echelle_5_positions": "Echelle 5 Positions",
+        "echelle_7_positions": "Echelle 7 Positions"
+    },
+
+    "question_ouverte":{
+        "ouverte":"Question Ouverte"
+    },
+    "parametres": {
+        "afficher": "Afficher Question",
+        "branchement": "Branchement Conditionnel",
+        "generer": "Générer Question",
+        "reduire_agrandir": "Réduire/Agrandir",
+        "supprimer": "Supprimer"
+    },
+    "SATISFACTION": {
+        "VERY_DISSATISFIED": "Très Insatisfait",
+        "SOMEWHAT_DISSATISFIED": "Plutôt Insatisfait",
+        "MODERATELY_SATISFIED": "Moyennement Satisfait",
+        "SOMEWHAT_SATISFIED": "Plutôt Satisfait",
+        "VERY_SATISFIED": "Très Satisfait",
+        "EXTREMELY_DISSATISFIED": "Extrêmement Insatisfait",
+        "EXTREMELY_SATISFIED": "Extrêmement Satisfait"
+    },
+
+    "result_simple":{
+        "choix_question": "Choisissez une question",
+        "visualisations_standard": "Visualisations Standard",
+        "visualisations_avancees": "Visualisations Avancées",
+        "message":"Aucun tableau ou graphique à afficher",
+        "choix_type_graphique":"Choisissez un type de représentation graphique",
+        "questionnaire":"Intitulé du questionnaire",
+        "explore_data":"Explorer les données recueillies",
+        "commentaire_placeholder":"Saisissez ici votre commentaire"
+    },
+    "PAGINATOR":{
+        "ITEMS_PER_PAGE": "Questionnaires par page",
+        "NEXT_PAGE": "Page suivante",
+        "PREVIOUS_PAGE": "Page précédente",
+        "FIRST_PAGE": "Première page",
+        "LAST_PAGE": "Dernière page",
+        "OF": "sur"
+          
+    },
+    "generator":{
+        "consigne_questionnary_1":"Voici une liste des thèmes et sous-thèmes susceptibles de répondre à votre problématique, veuillez sélectionner ceux que vous souhaitez conserver",
+        "accordion_close":"Fermer",
+        "accordion_open":"Ouvrir"
+    }
+    
+
+}

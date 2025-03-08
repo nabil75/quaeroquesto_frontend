@@ -1,0 +1,26 @@
+<li class="li-question">
+    <textarea autosize class="form-control libelle-question" placeholder="Libellé de la question" rows="1"
+        [(ngModel)]="libelleQuestion" name="libelleQuestion" readonly>
+    </textarea>
+    <div>
+        <table class="table table-bordered table-responsive" [ngClass]="{'table-dark': activeTheme !== 'light'}">
+            <thead>
+                <tr>
+                    <th class="centered">#</th>
+                    <th class="centered" *ngFor="let colonne of dataSourceColonnes"> {{ colonne.libelle}} </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ligne of dataSourceLignes; index as i">
+                    <td class="ligne"> {{ ligne.libelle}} </td>
+                    <td class="col-2 colonne" *ngFor="let colonne of dataSourceColonnes; index as j" width="50px">
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input" type="radio" id="{{i}}_{{j}}" name="{{i}}"
+                                (change)="onInputChange($event)" />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</li>

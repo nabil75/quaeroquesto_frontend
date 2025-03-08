@@ -1,0 +1,127 @@
+﻿{
+    "menu-general":{
+        "collect":"Collect",
+        "clean":"Clean",
+        "explore":"Explore",
+        "visualize":"Visualize",
+        "usefull-links":"Usefull Links",
+        "language":"Languages",
+        "theme":"Themes",
+        "en":"English",
+        "fr":"French",
+        "dark": "Dark",
+        "light": "Light"
+    },
+    "home":{
+        "leitmotiv":"Quaeroquesto toolbox: An accelerator serving knowledge",
+        "learn_more":"Learn More"
+
+    },
+    "my_questionnaire":{
+        "title_page":"My Questionnaires",
+        "choose_questionnaire": "Choose a questionnaire",
+        "id":"ID",
+        "title":"Title",
+        "creation_date":"Creation Date",
+        "actions":"Actions",
+        "nombre_questions": "Nb. Questions" 
+    },
+    "new_questionnaire": {
+        "title_page": "New Questionnaire"
+    },
+    "commons":{
+        "reponse":"Answer",
+        "reponse_obligatoire": "Mandatory",
+        "reponse_facultative": "Optional",
+        "reponse_oui": "Yes",
+        "reponse_non": "No",
+        "effectifs": "Frequencies",
+        "pourcentages": "Percentages",
+        "enregistrer": "Save",
+        "confirmation": "Confirmation before deletion",
+        "confirmation_suppression_questionnaire": "Are you sure you want to delete the selected questionnaire?",
+        "annuler": "Cancel",
+        "supprimer": "Delete"
+    },
+    "question_fermee":{
+        "modalites":"Answer Choices",
+        "choix_unique":"Closed-Ended Question Single-Choice",
+        "choix_multiple":"Closed-Ended Question Multiple-Choice",
+        "ajouter_modalite":"Add Answer Choice",
+        "nb_reponses_possibles":"Number Possible Answers",
+        "reponses_ordonnees":"Ordered Responses"
+    },
+
+    "question_notation":{
+        "notation":"Star Rating Question",
+        "nb_graduations":"Number Steps"
+    }, 
+    "question_echelle":{
+        "echelle": "Scale Question",
+        "semantique_differentiel":"Differential Semantics",
+        "ajouter_semantique_differentiel":"Add Differential Semantics"
+
+    },
+
+    "question_grille":{
+        "grille":"Grid Question",
+        "lignes":"Rows",
+        "colonnes":"Columns",
+        "ajouter_ligne":"Add Row",
+        "ajouter_colonne":"Add Column"
+    },
+
+    "question_satisfaction":{
+        "satisfaction":"Satisfaction Question",
+        "echelle_5_positions":"Scale 5 Positions",
+        "echelle_7_positions":"Scale 7 Positions"
+    },
+
+    "question_ouverte":{
+        "ouverte":"Open Question"
+    },
+
+    "parametres":{
+        "afficher":"Show Question",
+        "branchement":"Conditional Branching",
+        "generer":"Generate Question",
+        "reduire_agrandir":"Reduce/Collapse",
+        "supprimer":"Delete"
+    },
+
+    "SATISFACTION": {
+        "VERY_DISSATISFIED": "Very Dissatisfied",
+        "SOMEWHAT_DISSATISFIED": "Somewhat Dissatisfied",
+        "MODERATELY_SATISFIED": "Moderately Satisfied",
+        "SOMEWHAT_SATISFIED": "Somewhat Satisfied",
+        "VERY_SATISFIED": "Very Satisfied",
+        "EXTREMELY_DISSATISFIED": "Extremely Dissatisfied",
+        "EXTREMELY_SATISFIED": "Extremely Satisfied"
+    },
+    
+    "result_simple":{
+        "choix_question": "Choose a question",
+        "visualisations_standard": "Standard Visualizations",
+        "visualisations_avancees": "Advanced Visualizations",
+        "message":"No table or graph to display",
+        "choix_type_graphique":"Choose graphic representation",
+        "questionnaire":"Questionnaire title",
+        "explore_data":"Explore collected data",
+        "commentaire_placeholder":"Enter your comment here"
+    },
+    "PAGINATOR":{
+        "ITEMS_PER_PAGE": "Questionnaires per page",
+        "NEXT_PAGE": "Next page",
+        "PREVIOUS_PAGE": "Previous page",
+        "FIRST_PAGE": "First page",
+        "LAST_PAGE": "Last page",
+        "OF": "of"
+    },
+    "generator":{
+        "consigne_questionnary_1":"Here is a list of themes and sub-themes likely to respond to your problem, please select those you wish to keep.",
+        "accordion_close":"Close",
+        "accordion_open":"Open"
+    }
+    
+
+}

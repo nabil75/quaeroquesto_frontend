@@ -1,0 +1,26 @@
+<li class="li-question" >
+    <div class="div-libelle-question">
+        <textarea autosize class="form-control libelle-question" placeholder="Libellé de la question" rows="1"
+        [(ngModel)]="libelleQuestion" name="libelleQuestion" readonly></textarea>
+    </div>
+    <div>
+        <table class="table table-responsive" [ngClass]="{'table-dark': activeTheme !== 'light'}">
+            <tbody>
+                <tr *ngFor="let semantique of semantiques; index as i">
+                    <td class="col-lg-3 semantique semantique-gauche"> {{ semantique.libelleGauche }} </td>
+                    <td class="col-lg-5">
+
+                        <mat-slider discrete [color]="sliderColor">
+                            <input matSliderThumb (click)="change_note($event)" name="{{componentId}}_input-echelle" id="{{i}}"  />
+                        </mat-slider>
+                        <div hidden>
+                            <textarea autosize class="form-control libelle-question" placeholder="Pouvez-vous préciser ici pourquoi vous avez alloué cette note ?" rows="2"  class="comment"></textarea>
+                        </div>                        
+                    </td>
+                    <td class="col-lg-3 semantique semantique-droit"> {{ semantique.libelleDroit }} </td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+
+</li>

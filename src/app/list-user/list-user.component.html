@@ -1,0 +1,8 @@
+<div class="content" role="main">
+    <h2>List of users</h2>
+    <ul>
+      <li *ngFor="let user of users">
+        <h3>{{user.user_login}} ({{user.user_password}})</h3>
+      </li>
+    </ul>
+</div>

@@ -1,0 +1,29 @@
+<div class="side-modal" [class.open]="showModal">
+    <div class="modal-content">
+        <button type="button" class="close-modal" (click)="closeModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-x">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <h1 class="libelle-question"><strong>{{titre}}</strong></h1>
+        <div>
+            <table class="table table-responsive">
+                <tbody>
+                    <tr *ngFor="let semantique of semantiques; index as i">
+                        <td class="col-3"> {{ semantique.libelleGauche}} </td>
+                        <td class="col-6">
+                            <mat-slider discrete>
+                                <input matSliderThumb min="1" max="100" step="1" value="">
+                            </mat-slider>
+                        </td>
+                        <td class="col-3"> {{ semantique.libelleDroit }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

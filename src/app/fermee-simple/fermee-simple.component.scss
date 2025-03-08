@@ -1,0 +1,86 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+::placeholder {
+  color: var(--lightgray-text);
+}
+
+.ancre {
+  @include ancre-style();
+}
+
+.header-question {
+  @include header-question-style();
+}
+
+.question {
+  @include question-style();
+}
+
+.input-border-bottom {
+  @include input-border-bottom-style();
+}
+
+li.question::marker {
+  @include list-marker-style();
+}
+
+.libelle-question {
+  @include libelle-question-style();
+}
+
+.type-question {
+  @include type-question-style();
+}
+
+.menu-icon {
+  @include menu-icon-style();
+}
+
+.auto-mode-icon {
+  @include auto-mode-icon-style();
+}
+
+.menu-question {
+  @include menu-question-style();
+}
+
+.cdk-drag-preview {
+  @include cdk-drag-preview-style();
+}
+
+.colonne-actions {
+@include colonne-actions-style();
+}
+
+.colonne-position {
+  @include colonne-position-style();
+}
+
+.title-modalites {
+  @include title-modalites-style();
+}
+
+.libelle-modalite {
+  @include libelle-modalite-style();
+}
+
+.btn-addModalite{
+  @include btn-addModalite-style();
+}
+
+.table-modalites {
+  @include table-modalites_style();
+}
+
+.div-parameters {
+  @include div-parameters-style();
+}
+
+td {
+  @include td-style();
+}
+
+mat-button-toggle-group {
+  @include mat-button-toogle-group-style();
+}

@@ -1,0 +1,15 @@
+<li class="li-question">
+        <textarea autosize class="form-control libelle-question input-border-bottom" placeholder="Libellé de la question" rows="1"
+      [(ngModel)]="libelleQuestion" name="libelleQuestion" readonly></textarea>
+        
+
+    <div class="form-check libelle-modalite" *ngFor="let modalite of modalites; index as i">
+        <input class="form-check-input" type="radio" name="{{componentId}}_input-modalite-simple" id="{{componentId}}_{{i}}" (click)="onClickInput($event)">
+        <label class="form-check-label" for="{{componentId}}_{{i}}">
+            {{ modalite.libelle }}
+        </label>
+    </div>
+</li>
+    
+
+

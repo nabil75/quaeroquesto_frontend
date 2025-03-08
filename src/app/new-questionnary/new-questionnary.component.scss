@@ -1,0 +1,112 @@
+@import 'src/themes/variables.scss';
+
+body{
+    background-color: var(--body-background);
+}
+.fixed-size-element{
+  min-width: 1200px;
+  min-height: 800px;
+}
+.card{
+  background-color: var(--body-background)!important;
+  border: none;
+}
+.toolbox {
+  display: block;
+  position: fixed;
+  left: 0;
+  width: 50px;
+  top: 20%;
+  margin-left: 10px;
+}
+mat-card {
+  width: 85%;
+  margin: auto;
+  background-color: var(--body-background);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+.label-xxl {
+  font-size: var(--font-size-title);
+  background-color: transparent;
+  color: var(--title-section-color);
+}
+.label-xxxl {
+  font-size: var(--font-size-title-page);
+  background-color: transparent;
+  padding: 0.3vw;
+  color: var(--title-section-color);
+}
+.intitule {
+  font-size: 1.5vw;
+  margin-bottom: 3%;
+}
+#main {
+  border-radius: 10px 10px 10px 10px;
+  border: 3px solid var(--div-border);
+  padding: 0% 2% 0% 5%;
+}
+.input-border-bottom {
+  border-top: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 1px solid  rgb(227, 217, 217);
+  border-left: 0 solid transparent;
+  border-radius: 5px 5px 0px 0px;
+  background-color: transparent;
+  margin-bottom: 1%;
+}
+.img-toolbox {
+  cursor: pointer;
+  border: 1px thin rgb(217, 215, 231);
+  border-radius: 1vh 1vh 1vh 1vh;
+  width: 5vh;
+  height: 5vh;
+  min-width: 4vh;
+  min-height: 4vh;
+}
+.img-toolbox:hover {
+  cursor: pointer;
+  border: 4px solid rgb(228, 225, 243);
+  border-radius: 1vh 1vh 1vh 1vh;
+  width: 5vh;
+  height: 5vh;
+  min-width: 4vh;
+  min-height: 4vh;
+}
+.li-toolbox {
+  margin-bottom: 3px;
+  margin-left: -30px;
+  list-style-type: none;
+}
+.question {
+  background-color: var(--div-background);
+  padding: 1%;
+  border-radius: 1vh 1vh 1vh 1vh;
+  margin-bottom: 2%;
+  background-image: -webkit-linear-gradient(top, var(--violetta), var(--violetta) 5vh, transparent 0%, transparent 100%);
+}
+#intituleQuestionnaire {
+  resize: none;
+  overflow-y: hidden;
+  color: var(--primary-text);
+}
+
+#intituleQuestionnaireVide {
+  width: fit-content;
+}
+.btn-question{
+  border: none;
+  background-color: transparent;
+  margin-left: -10px;
+}
+.image-menu{
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+::placeholder {
+  color: var(--secondary-text);
+  opacity: 1; /* Firefox */
+}
+#img-question{
+  content: var(--img-question);
+}

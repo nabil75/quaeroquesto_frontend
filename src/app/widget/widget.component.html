@@ -1,0 +1,13 @@
+<mat-card>
+    <div *ngIf="type === 'text'">
+      <textarea matInput [(ngModel)]="data.text" placeholder="Écrivez ici..."></textarea>
+    </div>
+    <div *ngIf="type === 'table'">
+      <!-- Ajouter votre implémentation du tableau ici -->
+      <p>Tableau des résultats (Simple ou Croisé)</p>
+    </div>
+    <div *ngIf="type === 'chart'">
+      <!-- Ajouter votre implémentation du graphique ici -->
+      <p>Graphique des résultats</p>
+    </div>
+  </mat-card>

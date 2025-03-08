@@ -1,0 +1,10 @@
+<li class="question">
+    <textarea autosize class="form-control libelle-question input-border-bottom" placeholder="Libellé de la question"
+        rows="1" [(ngModel)]="libelleQuestion" name="libelleQuestion" readonly>
+    </textarea>
+    <div class="d-flex justify-content-center" #myComponent>
+        <img class="img-empty" src="assets/images/quaero/star_all_empty.png" (click)='all_empty_image()' />
+        <img class="img-etoile" *ngFor="let i of Arr(nbStars).fill(1); index as n"
+            src="assets/images/quaero/star_empty.png" title="{{n+1}}" (click)='change_image(n)' />
+    </div>
+</li>

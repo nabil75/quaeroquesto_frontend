@@ -1,0 +1,213 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+body{
+  background-color: var(--body-background);
+  height: 100%;
+}
+.fixed-size-element{
+  min-width: 400px;
+  min-height: 400px;
+}
+.toolbox {
+  display: block;
+  position: fixed;
+  left: 0;
+  width: 50px;
+  top: 20%;
+}
+mat-card {
+  width: 80%;
+  margin: auto;
+  background-color: var(--div-background);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-form-field {
+  width: 100%;
+  margin-top: 2%;
+}
+
+mat-option {
+  margin-bottom: 1%;
+}
+.custom-select-panel {
+  max-height: 200px; /* Adjust this value to limit the number of options visible */
+  overflow-y: auto;  /* Adds a scrollbar if there are more options */
+}
+
+.tableau{
+  width: 40%;
+}
+
+.message {
+  width: 100%;
+  margin-top: 1%;
+  color: var(--error-alert)
+}
+
+.label-xxl {
+  font-size: 35px;
+  background-color: transparent;
+  padding: 0.3vw;
+  color: var(--title-section-color);
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 12px;
+  font-weight: lighter;
+}
+
+.label-xxxl {
+  font-size: var(--font-size-title-page);
+  background-color: transparent;
+  padding: 0.3vw;
+  color: var(--title-section-color);
+  margin-bottom: 1%;
+}
+
+.input-border-bottom{
+  margin-top: 2%;
+  color: var(--primary-text);
+  @include input-border-bottom-style();
+}
+
+.img-toolbox {
+@include img-toolbox-style();
+}
+
+.li-toolbox {
+  margin-bottom: 3px;
+  margin-left: -30px;
+  list-style-type: none;
+}
+
+.colonne-position-left{
+  text-align: left;
+}
+
+.colonne-position-center{
+  text-align: center;
+}
+
+.colonne-position-right{
+  text-align: right;
+}
+
+.colonne-resultat{
+  width: 10%;
+}
+
+.ligne-total{
+  font-weight: bold;
+}
+
+.btn-question{
+  border: none;
+  background-color: transparent;
+  margin-left: -5px;
+}
+
+.resizable {
+  resize: both; /* Permet de redimensionner horizontalement et verticalement */
+  min-width: 200px; /* Taille minimale */
+  min-height: 150px; /* Hauteur minimale */
+  max-width: 100%; /* Limite la largeur maximale à 100% du conteneur parent */
+  max-height: 100%; /* Limite la hauteur maximale */
+  border: 1px solid #ccc; /* Pour rendre le conteneur plus visible */
+}
+
+.img-responsive {
+  width: 100%; /* L'image s'ajustera à la taille du conteneur */
+  height: auto; /* Maintient les proportions de l'image */
+}
+
+/* Par défaut, la barre de défilement est masquée */
+.scrollable {
+  overflow: hidden; /* Masque la barre de défilement */
+}
+
+/* Afficher la barre de défilement au survol */
+.scrollable:hover {
+  overflow: auto; /* Affiche la barre de défilement au survol */
+}
+
+/* Pour un comportement plus précis, vous pouvez spécifier uniquement le défilement vertical ou horizontal */
+.scrollable:hover {
+  overflow-y: auto; /* Barre de défilement verticale uniquement */
+  overflow-x: hidden; /* Pas de barre de défilement horizontale */
+}
+
+.graph{
+  border: 5px solid var(--secondary-text);
+  border-radius: 10px;
+}
+
+.type-values{
+  margin-top: 10px;
+  margin-left:10px;
+}
+
+.form-check-input{
+  color: var(--primary-text);
+}
+
+.form-check-label{
+  color: var(--primary-text);
+  margin-left: 10px;
+}
+
+.titre-graphique{
+  @include input-border-bottom-style();
+}
+
+/* Overlay covering the entire page */
+.overlay-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Au-dessus des autres éléments */
+}
+
+/* Spinner container centered vertically */
+.spinner-container {
+  display: flex;
+  flex-direction: column; /* Aligne le spinner et le texte verticalement */
+  align-items: center; /* Centre horizontalement */
+  text-align: center;
+}
+
+.spinner-container h1 {
+  color: white;
+  margin-top: 10px;
+}
+::placeholder {
+  color: var(--gray-text);
+  opacity: 1; /* Firefox */
+}
+.btn-addCommentaire{
+  @include btn-addModalite-style();
+  margin-top: -10px;
+}
+.icon-chart, .btn-chart {
+  color: var(--primary-text);
+}
+@media (max-width: 1600px) {
+  .btn-text {
+    visibility: hidden;
+  }
+  .icon-chart{
+    transform: scale(1.5);
+  }
+  .label-xxl{
+    font-size: 25px;
+  }
+  .btn-addCommentaire{
+    font-size: 20px;
+  }
+}

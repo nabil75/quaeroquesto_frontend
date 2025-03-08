@@ -1,0 +1,34 @@
+
+@import 'src/themes/variables.scss';
+
+body{
+    background-color: var(--body-background);
+    font-family: 'Roboto';
+    min-width: 800px;
+    height: 100vh;
+}
+.separateur{
+    margin: 5%;
+}
+.separateur-menu{
+    margin-bottom: 2%;
+}
+
+.image-menu{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.image-menu-xl{
+    width: 35px;
+    height: 35px;
+}
+
+.menu-general{
+    width: 4vw;
+    height: 4vw;
+    color: white;
+    display: block; 
+    position: fixed; 
+    left: 0;
+}

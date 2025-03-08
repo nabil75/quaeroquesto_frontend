@@ -1,0 +1,28 @@
+<body>
+  <mat-card>
+    <mat-card-content>
+      <div class="toolbox">
+        <ul>
+          <li class="li-toolbox"><img class="img_toolbox" id="img_save" [src]="path_img_save"
+              data-url="" title="Sauvegarder" (click)="saveQuestionnary()" /></li>
+        </ul>
+      </div>
+
+      <div class="bg-light p-5 rounded card">
+        <div class="d-flex justify-content-between">
+          <span class="label-xxl">{{statusQuestionnary}}</span>
+          <span class="label-xxl d-block">{{ id_questionnary }}</span>
+        </div>
+        <div>
+          <textarea autosize class="form-control intitule input-border-bottom" placeholder="Libellé de la question" rows="1"
+            [(ngModel)]="intituleQuestionnaire" name="intituleQuestionnaire" readonly></textarea>
+        </div>
+        <div>
+          <ol>
+            <ng-template #question></ng-template>
+          </ol>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</body>

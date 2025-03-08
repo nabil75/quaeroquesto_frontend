@@ -1,0 +1,14 @@
+﻿{
+    "themes": {
+        "light": {
+          "backgroundColor": "rgb(238, 243, 245)",
+          "textColor": "rgb(0,161,224)",
+          "primaryColor": "#1e90ff"
+        },
+        "dark": {
+          "backgroundColor":  "rgb(240, 236, 239)",
+          "textColor": "rgb(76, 56, 117)",
+          "primaryColor": "#ff4500"
+        }
+      }
+}

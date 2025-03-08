@@ -1,0 +1,44 @@
+@import 'src/themes/variables.scss';
+@import 'src/themes/mixins.scss';
+
+body {
+  background-color: var(--body-background);
+}
+mat-card{
+  background-color: var(--body-background);
+}
+.card{
+  background-color: var(--body-background)!important;
+  border: none;
+}
+mat-card-content{
+  width: 80%;
+  margin: auto;
+  background-color: var(--body-background);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+} 
+
+.label-xxl {
+  font-size: var(--font-size-title);
+  background-color: transparent;
+  padding: 0.3vw;
+  color: var(--title-section-color);
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.intitule{
+  @include libelle-question-style();
+}
+.input-border-bottom{
+  @include input-border-bottom-style();
+}
+.toolbox {
+  display: block; position: fixed; left: 0; width: 50px; top: 25%;
+}
+.li-toolbox{
+  margin-bottom: 3px; margin-left: -30px; list-style-type: none;
+}
+.img_toolbox{
+  @include img-toolbox-style();
+}

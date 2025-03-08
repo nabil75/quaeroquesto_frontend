@@ -1,0 +1,68 @@
+
+<div class="side-modal" [class.open]="showModal">
+    <div class="modal-content">
+        <div>
+            <button type="button" class="close-modal" (click)="closeModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <h2 class="titre-modal" >Générer une question automatiquement</h2>  
+        </div>
+        <div >
+            <div>
+               <span class="spinner-border spinner-border-md" *ngIf="spin"></span>
+            </div>
+
+            
+            <div class="mots-cles">
+                <mat-form-field>
+                    <mat-label>Mots clés représentatifs de l'information recherchée</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Selectionnez une thématique parmi les suivantes :</mat-label>
+                    <mat-select>
+                    <mat-option value="1">Connaissance de l'univers produit</mat-option>
+                    <mat-option value="2">Comportement d'achat ou de consommation (fidélité vs butinage, fréquence, )</mat-option>
+                    <mat-option value="3">Habitudes de fréquentation (point de vente, média, lieu divers, ...)</mat-option>
+                    <mat-option value="4">Satisfaction à l'égard du produit ou service</mat-option>
+                    <mat-option value="5">Modes d'évaluation de la performance-produit</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div style="float: right; margin-bottom: 2%">
+                <button mat-button color="primary" (click) ="genererQuestion()">Générer une question</button>
+            </div>
+            <div> 
+                <mat-form-field>
+                    <mat-label>Libellé Question</mat-label>
+                    <textarea matInput autosize [(ngModel)] ="libelle_question"  rows="5" name="libelle_question"></textarea>
+                </mat-form-field>
+            </div>
+            <div style="float: right; margin-bottom: 2%">
+                <button mat-button color="primary" (click) ="genererModalites()">Générer les modalités de réponse</button>
+            </div>
+
+            <div> 
+                <mat-form-field>
+                    <mat-label>Modalités de réponse</mat-label>
+                    <textarea matInput autosize [(ngModel)] ="modalites_question"  rows="5" name="modalites_question"></textarea>
+                </mat-form-field>
+            </div>
+
+            <div style="float: right; margin-top: 2%">
+                <button mat-button color="primary" (click) ="sendProposition()">Transferer la proposition</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
