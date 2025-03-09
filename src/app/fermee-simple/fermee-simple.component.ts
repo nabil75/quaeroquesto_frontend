@@ -1,4 +1,4 @@
-import { Component, ViewChild, ChangeDetectionStrategy, OnInit, SimpleChanges, Signal, signal } from '@angular/core';
+import { Component, ViewChild, ChangeDetectionStrategy, OnInit, SimpleChanges } from '@angular/core';
 import { EventEmitterService } from 'src/app/services/event-emitter.service';
 import { UtilsService } from 'src/app/services/utils.service';
 import { CollapseQuestionsService } from '../services/collapse-questions.service';
@@ -14,7 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { FermeeSimpleModalComponent } from '../modal/afficher-question/fermee-simple-modal/fermee-simple-modal.component';
 import { FermeeSimpleBranchementComponent } from '../modal/branchement/fermee-simple-branchement/fermee-simple-branchement.component';
 import { FermeeSimpleGeneratorComponent } from '../modal/generator-question/fermee-simple-generator/fermee-simple-generator.component';
